@@ -1,0 +1,20 @@
+# Obsidian local workspace and app state
+.obsidian/
+
+# OS/editor noise
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Temp and backup files
+*.tmp
+*.temp
+*.bak
+*.swp
+*.swo
+*~
+*.tmp**
+
+# Google Drive temp files
+.tmp.driveupload/
+.tmp.drivedownload/
