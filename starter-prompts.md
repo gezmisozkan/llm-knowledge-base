@@ -1,37 +1,23 @@
-# Starter Prompts for Your Knowledge Base
+# Starter Prompts for the Dual Knowledge Base
 
-## 1. Scrape a Web Source
+## 1. Explore This Repository
 
-To add a web article or page:
+> Explore this codebase and capture durable knowledge in `repo-kb/`. Read root `CLAUDE.md`, then `repo-kb/CLAUDE.md`. Document architecture, components, setup, workflows, decisions, and debugging notes. Prefer updating existing repo pages over creating new ones.
 
-> Scrape [URL] into `raw/web/`. Extract the main content and save it as a markdown file with a descriptive filename. Preserve important headings, lists, tables, and code snippets where possible. Do not summarize yet.
+## 2. Save A General Lesson
 
-## 2. Compile Or Update The Wiki
+> Inspect this material and save it to `daily-kb/` if it is general, reusable, or personal knowledge. Read root `CLAUDE.md`, then `daily-kb/CLAUDE.md`. Put rough material in `daily-kb/raw/` first when needed.
 
-After adding sources to `raw/`, run:
+## 3. Promote Repo Knowledge Into Daily Knowledge
 
-> Read everything in `raw/`. Then compile or update the wiki in `wiki/` following the rules in `CLAUDE.md`. Create or update `wiki/INDEX.md` first, then update existing topic pages when possible, and create new pages only when needed. Link related topics. Summarize durable knowledge, not just source text.
+> Review `repo-kb/` and identify lessons that are reusable outside this repository. Keep concrete implementation detail in `repo-kb/`, and promote only the generalized version into `daily-kb/wiki/`.
 
-## 3. Ask Questions Against The KB
+## 4. Answer From One Scope
 
-Once `wiki/` has useful coverage, try prompts like:
+> Answer this question using only `repo-kb/wiki/`.
 
-> Based on everything in `wiki/`, what are the three biggest gaps in my understanding of [topic]?
-
-> Compare what source A says about [concept] vs what source B says. Where do they disagree?
-
-> Write me a 500-word briefing on [topic] using only this knowledge base.
-
-Save generated answers to `outputs/` or promote durable parts into `wiki/`.
-
-## 4. Add New Knowledge Quickly
-
-Use this when you paste notes, lessons, or copied material:
-
-> Inspect the existing knowledge base and decide whether this belongs in `raw/`, `wiki/`, or `outputs/`. Update an existing wiki page if one already fits. Otherwise create the smallest correct new file. If the material is incomplete, save it in `raw/` first and note likely promotion targets.
+> Answer this question using only `daily-kb/wiki/`.
 
 ## 5. Monthly Health Check
 
-Run this periodically:
-
-> Review the entire `wiki/` directory. Flag contradictions, duplicate pages, orphan pages, claims not backed by `raw/`, and topics mentioned but never explained. Suggest missing pages that would improve coverage and identify outputs that should be promoted into `wiki/`.
+> Review `daily-kb/wiki/` and `repo-kb/wiki/` separately. Flag contradictions, duplicates, orphan pages, weakly sourced claims, and missing pages. Do not merge the two scopes.
